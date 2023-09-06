@@ -1,18 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
-public class NewBehaviourScript : MonoBehaviour
+public class ScreenshotSaver : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private string screenshotDirectory;
+    private string screenshotPath;
+    private int snapshotNum = 0;
+
     void Start()
     {
-        
+        screenshotDirectory = Application.persistentDataPath + "/Screenshots/";
+
+        if (!Directory.Exists(screenshotDirectory))
+        {
+            Directory.CreateDirectory(screenshotDirectory);
+        }
+
+        screenshotPath = screenshotDirectory + "myScreenshot.png";
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            CaptureScreenshot();
+            snapshotNum++;
+        }
+    }
+
+    void CaptureScreenshot()
+    {
+        ScreenCapture.CaptureScreenshot(screenshotPath);
+        Debug.Log("Screenshot saved to: " + screenshotPath);
     }
 }

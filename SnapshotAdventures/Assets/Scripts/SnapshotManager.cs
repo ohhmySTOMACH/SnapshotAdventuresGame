@@ -1,26 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 namespace Camera
 {
     public class SnapshotManager : MonoBehaviour
     {
-        public List<Texture2D> cameraRoll = new List<Texture2D>();
+        private string screenshotDirectory;
+        private string screenshotPath;
+        private int snapshotNum = 0;
 
-        // Update is called once per frame
+        void Start()
+        {
+            screenshotDirectory = Application.persistentDataPath + "/Screenshots/";
+
+            if (!Directory.Exists(screenshotDirectory))
+            {
+                Directory.CreateDirectory(screenshotDirectory);
+            }
+
+            screenshotPath = screenshotDirectory + "myScreenshot" + snapshotNum + ".png";
+        }
+
         void Update()
         {
-            if (Input.GetMouseButtonDown(0)) {
-                CapturePhotos();
+            if (Input.GetMouseButtonDown(0))
+            {
+                CaptureScreenshot();
+                snapshotNum++;
             }
         }
 
-        void CapturePhotos() 
+        void CaptureScreenshot()
         {
-            Texture2D capturedScreenshot = ScreenCapture.CaptureScreenshotAsTexture();
-            cameraRoll.Add(capturedScreenshot);
-            Debug.Log("Photo added to camera roll.");
+            ScreenCapture.CaptureScreenshot(screenshotPath);
+            Debug.Log("Screenshot saved to: " + screenshotPath);
         }
     }
 }
