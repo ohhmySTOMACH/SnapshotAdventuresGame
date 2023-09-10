@@ -11,6 +11,7 @@ namespace Camera
 
         void Start()
         {
+            // TODO change String to constant
             screenshotDirectory = Application.persistentDataPath + "/Screenshots/";
 
             if (!Directory.Exists(screenshotDirectory))
