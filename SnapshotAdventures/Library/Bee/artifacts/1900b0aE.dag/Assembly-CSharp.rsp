@@ -374,15 +374,6 @@
 -analyzer:"D:/Program Files (x86)/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/MovementManager.cs"
 "Assets/Scripts/SnapshotManager.cs"
-"Assets/StarterAssets/FirstPersonController/Scripts/BasicRigidBodyPush.cs"
-"Assets/StarterAssets/FirstPersonController/Scripts/FirstPersonController.cs"
-"Assets/StarterAssets/InputSystem/StarterAssetsInputs.cs"
-"Assets/StarterAssets/Mobile/Scripts/CanvasInputs/UICanvasControllerInput.cs"
-"Assets/StarterAssets/Mobile/Scripts/Utilities/MobileDisableAutoSwitchControls.cs"
-"Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualButton.cs"
-"Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualJoystick.cs"
-"Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualTouchZone.cs"
-"Assets/StarterAssets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 
 /deterministic
