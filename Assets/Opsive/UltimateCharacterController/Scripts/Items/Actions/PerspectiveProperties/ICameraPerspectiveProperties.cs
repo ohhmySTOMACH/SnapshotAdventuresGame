@@ -5,7 +5,7 @@
 /// Copyright (c) Opsive. All Rights Reserved.
 /// https://www.opsive.com
 /// ---------------------------------------------
-namespace SnapshotChronicles.MyCamera
+namespace SnapshotChronicles.Camera
 {
     /// <summary>
     /// Interface for a Camera

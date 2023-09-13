@@ -1,4 +1,4 @@
-namespace SnapshotChronicles.MyCamera
+namespace SnapshotChronicles.Camera
 {
     using System;
     using System.Collections;

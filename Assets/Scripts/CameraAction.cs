@@ -2,7 +2,7 @@
 using Opsive.UltimateCharacterController.Items.Actions;
 using UnityEngine;
 
-namespace SnapshotChronicles.MyCamera
+namespace SnapshotChronicles.Camera
 {
     /// <summary>
     /// A Camera that can take pictures

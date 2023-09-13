@@ -4,7 +4,7 @@
 /// https://www.opsive.com
 /// ---------------------------------------------
 
-namespace SnapshotChronicles.MyCamera
+namespace SnapshotChronicles.Camera
 {
     using Opsive.UltimateCharacterController.FirstPersonController.Items;
     using UnityEngine;
