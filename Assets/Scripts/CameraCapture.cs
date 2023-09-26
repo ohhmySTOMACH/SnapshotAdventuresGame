@@ -56,6 +56,7 @@ namespace SnapshotChronicles.Camera
                 Debug.Log("cameraLightTransform is null");
             }
         }
+        
         public void OnCapture()
         {
             if (isCapturing) 

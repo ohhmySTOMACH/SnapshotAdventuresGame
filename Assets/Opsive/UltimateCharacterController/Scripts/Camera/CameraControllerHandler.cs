@@ -3,7 +3,7 @@
 /// Copyright (c) Opsive. All Rights Reserved.
 /// https://www.opsive.com
 /// ---------------------------------------------
-
+/// 
 namespace Opsive.UltimateCharacterController.Camera
 {
     using Opsive.Shared.Events;
