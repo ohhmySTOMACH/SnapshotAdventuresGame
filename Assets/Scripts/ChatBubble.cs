@@ -1,20 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Runtime.InteropServices;
 
 public class ChatBubble : MonoBehaviour {
+    private static float localRotationX = 90f;
+    private static float localRotationY = 0f;
 
-    [SerializeField] private Transform pfChatBubble;
+    private static float localRotationZ = 0f;
 
-    
+
     private SpriteRenderer backgroundSpriteRenderer;
-    private SpriteRenderer iconSpriteRenderer;
     private TextMeshPro textMeshPro;
     
-    public void Create(Transform parent, Vector3 localPosition, string text) {
-        Transform chatBubbleTransform = Instantiate(pfChatBubble, parent);
+    public static void Create(Transform parent, Vector3 localPosition, string text) {
+        Transform chatBubbleTransform = Instantiate(GameAssets.i.pfChatBubble, parent);
         chatBubbleTransform.localPosition = localPosition;
+        chatBubbleTransform.localRotation = Quaternion.Euler(localRotationX, localRotationY, localRotationZ);
+        // chatBubbleTransform.LookAt(target);
 
         chatBubbleTransform.GetComponent<ChatBubble>().Setup(text);
 
@@ -25,10 +27,6 @@ public class ChatBubble : MonoBehaviour {
         backgroundSpriteRenderer = transform.Find("Background").GetComponent<SpriteRenderer>();
         textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
     }
-
-    // private void Start() {
-    //     Setup("Hello World!");
-    // }
 
     private void Setup(string text) {
         textMeshPro.SetText(text);

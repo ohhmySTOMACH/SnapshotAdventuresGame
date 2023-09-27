@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a255494fce1c647870f0c29da29439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pfChatBubble: {fileID: 7479830750726889624}
 --- !u!1 &4991566170565379232
 GameObject:
   m_ObjectHideFlags: 0
