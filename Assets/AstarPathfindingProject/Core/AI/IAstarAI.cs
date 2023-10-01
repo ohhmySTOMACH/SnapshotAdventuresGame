@@ -109,7 +109,7 @@ namespace Pathfinding {
 		/// IEnumerator Start () {
 		///     ai.destination = somePoint;
 		///     // Start to search for a path to the destination immediately
-		///     ai.SearchPath();
+		///     ai.;
 		///     // Wait until the agent has reached the destination
 		///     while (!ai.reachedDestination) {
 		///         yield return null;

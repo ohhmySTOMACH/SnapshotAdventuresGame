@@ -107,7 +107,7 @@
 		- Fixed a bug which could very rarely cause some node connections between tiles in a recast graph to be missed, causing various subtle movement issues.
 		- Fixed \reflink{AIPath.reachedEndOfPath} not always being reset to false when the component was disabled and then enabled again.
 		- \reflink{GraphNode.ClosestPointOnNode} is now available for all node types instead of only being implemented for \reflink{GridNode} and \reflink{MeshNode}.
-		- Fixed a case where the Seeker -> Start End Modifier -> Snapping to NodeConnection mode would not respect tags or \reflink{ITraversalProvider}s.
+		- Fixed a case where the Seeker -> Start End  -> Snapping to NodeConnection mode would not respect tags or \reflink{ITraversalProvider}s.
 			This could result in the path partially entering a node which should not be traversable by it.
 		- Fixed a case where using the \reflink{ABPath.calculatePartial} option together with Seeker->Start End Modifier->Snapping=ClosestOnNode would make the path seemingly ignore which tags were traversable in some cases.
 		- Fixed clicking Apply in the Optimizations tab could log error messages about some build platforms not existing.
