@@ -1,7 +1,7 @@
 using UnityEngine;
 using Opsive.Shared.Events;
 
-public class CustomEvents : MonoBehaviour
+public class AnimalActionEvents : MonoBehaviour
 {
     public void Awake()
     {
@@ -14,6 +14,8 @@ public class CustomEvents : MonoBehaviour
     private void OnPlayerCloseUp(GameObject player)
     {
         Debug.Log("The player closed up to" + gameObject);
+        AnimalAction animalAction = gameObject.GetComponent<AnimalAction>();
+        animalAction.RunAway();
         // TODO: Call the action perform method from animal object
     }
 
