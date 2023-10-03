@@ -11,6 +11,8 @@ TagManager:
   - Synty Small Farm
   - PW - Nature
   - CinemachineTarget
+  - Animals
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -10,16 +10,23 @@ namespace SnapshotChronicles.Interaction
     {
         [SerializeField] private float interactRange = 5f;
         private NPCInteraction npcInteraction;
+        private const string PLAYER_CLOSE_TRIGGER = "PlayerCloseTrigger";
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E)){
-                Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
-                foreach (Collider collider in colliderArray) {
-                    npcInteraction = collider.GetComponent<NPCInteraction>();
-                    if (npcInteraction != null) 
-                    {
-                        npcInteraction.Interact();
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+            foreach (Collider collider in colliderArray) {
+                if (Input.GetKeyDown(KeyCode.E)){
+                    if (collider.CompareTag("NPC")) {
+                        npcInteraction = collider.GetComponent<NPCInteraction>();
+                        if (npcInteraction != null) 
+                        {
+                            npcInteraction.Interact();
+                        }
                     }
+                }
+                
+                if (collider.CompareTag("Animals")) {
+                    collider.GetComponent<Animator>().SetTrigger(PLAYER_CLOSE_TRIGGER);
                 }
             }
             
