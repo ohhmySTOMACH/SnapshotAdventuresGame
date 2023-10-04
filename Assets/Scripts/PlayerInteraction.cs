@@ -14,14 +14,17 @@ namespace SnapshotChronicles.Interaction
         void Update()
         {
             InteractWithNPC();
+            // TODO: change to distance to triggered object.
             foreach (GameObject animalObject in animalObjects) {
-                float distanceToAnimal = Vector3.Distance(transform.position, animalObject.transform.position);
-                if (distanceToAnimal <= interactRange) {
-                    Opsive.Shared.Events.EventHandler.ExecuteEvent(animalObject, "OnPlayerCloseUp");
+                if (animalObject != null) {
+                    float distanceToAnimal = Vector3.Distance(transform.position, animalObject.transform.position);
+                    if (distanceToAnimal <= interactRange) {
+                        Opsive.Shared.Events.EventHandler.ExecuteEvent(animalObject, "OnPlayerCloseUp");
+                    }
+                } else {
+                    Debug.Log(animalObject.name + "is destroyed");
                 }
             }
-           
-
         }
 
         private void InteractWithNPC()

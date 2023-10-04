@@ -1,175 +1,456 @@
 fileFormatVersion: 2
 guid: 91b0d8f5e7724204e847be8e451f84ff
-timeCreated: 1510241634
-licenseType: Store
 ModelImporter:
-  serializedVersion: 18
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: DUCK_
-    100004: DUCK_ Head
-    100006: DUCK_ L Calf
-    100008: DUCK_ L Clavicle
-    100010: DUCK_ L Foot
-    100012: DUCK_ L Forearm
-    100014: DUCK_ L Hand
-    100016: DUCK_ L HorseLink
-    100018: DUCK_ L Thigh
-    100020: DUCK_ L Toe0
-    100022: DUCK_ L Toe01
-    100024: DUCK_ L Toe02
-    100026: DUCK_ L UpperArm
-    100028: DUCK_ Neck
-    100030: DUCK_ Neck1
-    100032: DUCK_ Neck2
-    100034: DUCK_ Neck3
-    100036: DUCK_ Neck4
-    100038: DUCK_ Pelvis
-    100040: DUCK_ Queue de cheval 1
-    100042: DUCK_ R Calf
-    100044: DUCK_ R Clavicle
-    100046: DUCK_ R Foot
-    100048: DUCK_ R Forearm
-    100050: DUCK_ R Hand
-    100052: DUCK_ R HorseLink
-    100054: DUCK_ R Thigh
-    100056: DUCK_ R Toe0
-    100058: DUCK_ R Toe01
-    100060: DUCK_ R Toe02
-    100062: DUCK_ R UpperArm
-    100064: DUCK_ Spine
-    100066: root
-    100068: TailL
-    100070: TailR
-    100072: WingLeftA
-    100074: WingLeftB
-    100076: WingLeftC
-    100078: WingLeftD
-    100080: WingLeftE
-    100082: WingLeftF
-    100084: WingLeftG
-    100086: WingLeftH
-    100088: WingRightA
-    100090: WingRightB
-    100092: WingRightC
-    100094: WingRightD
-    100096: WingRightE
-    100098: WingRightF
-    100100: WingRightG
-    100102: WingRightH
-    400000: //RootNode
-    400002: DUCK_
-    400004: DUCK_ Head
-    400006: DUCK_ L Calf
-    400008: DUCK_ L Clavicle
-    400010: DUCK_ L Foot
-    400012: DUCK_ L Forearm
-    400014: DUCK_ L Hand
-    400016: DUCK_ L HorseLink
-    400018: DUCK_ L Thigh
-    400020: DUCK_ L Toe0
-    400022: DUCK_ L Toe01
-    400024: DUCK_ L Toe02
-    400026: DUCK_ L UpperArm
-    400028: DUCK_ Neck
-    400030: DUCK_ Neck1
-    400032: DUCK_ Neck2
-    400034: DUCK_ Neck3
-    400036: DUCK_ Neck4
-    400038: DUCK_ Pelvis
-    400040: DUCK_ Queue de cheval 1
-    400042: DUCK_ R Calf
-    400044: DUCK_ R Clavicle
-    400046: DUCK_ R Foot
-    400048: DUCK_ R Forearm
-    400050: DUCK_ R Hand
-    400052: DUCK_ R HorseLink
-    400054: DUCK_ R Thigh
-    400056: DUCK_ R Toe0
-    400058: DUCK_ R Toe01
-    400060: DUCK_ R Toe02
-    400062: DUCK_ R UpperArm
-    400064: DUCK_ Spine
-    400066: root
-    400068: TailL
-    400070: TailR
-    400072: WingLeftA
-    400074: WingLeftB
-    400076: WingLeftC
-    400078: WingLeftD
-    400080: WingLeftE
-    400082: WingLeftF
-    400084: WingLeftG
-    400086: WingLeftH
-    400088: WingRightA
-    400090: WingRightB
-    400092: WingRightC
-    400094: WingRightD
-    400096: WingRightE
-    400098: WingRightF
-    400100: WingRightG
-    400102: WingRightH
-    7400000: Take 001
-    9500000: //RootNode
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: DUCK_
+  - first:
+      1: 100004
+    second: DUCK_ Head
+  - first:
+      1: 100006
+    second: DUCK_ L Calf
+  - first:
+      1: 100008
+    second: DUCK_ L Clavicle
+  - first:
+      1: 100010
+    second: DUCK_ L Foot
+  - first:
+      1: 100012
+    second: DUCK_ L Forearm
+  - first:
+      1: 100014
+    second: DUCK_ L Hand
+  - first:
+      1: 100016
+    second: DUCK_ L HorseLink
+  - first:
+      1: 100018
+    second: DUCK_ L Thigh
+  - first:
+      1: 100020
+    second: DUCK_ L Toe0
+  - first:
+      1: 100022
+    second: DUCK_ L Toe01
+  - first:
+      1: 100024
+    second: DUCK_ L Toe02
+  - first:
+      1: 100026
+    second: DUCK_ L UpperArm
+  - first:
+      1: 100028
+    second: DUCK_ Neck
+  - first:
+      1: 100030
+    second: DUCK_ Neck1
+  - first:
+      1: 100032
+    second: DUCK_ Neck2
+  - first:
+      1: 100034
+    second: DUCK_ Neck3
+  - first:
+      1: 100036
+    second: DUCK_ Neck4
+  - first:
+      1: 100038
+    second: DUCK_ Pelvis
+  - first:
+      1: 100040
+    second: DUCK_ Queue de cheval 1
+  - first:
+      1: 100042
+    second: DUCK_ R Calf
+  - first:
+      1: 100044
+    second: DUCK_ R Clavicle
+  - first:
+      1: 100046
+    second: DUCK_ R Foot
+  - first:
+      1: 100048
+    second: DUCK_ R Forearm
+  - first:
+      1: 100050
+    second: DUCK_ R Hand
+  - first:
+      1: 100052
+    second: DUCK_ R HorseLink
+  - first:
+      1: 100054
+    second: DUCK_ R Thigh
+  - first:
+      1: 100056
+    second: DUCK_ R Toe0
+  - first:
+      1: 100058
+    second: DUCK_ R Toe01
+  - first:
+      1: 100060
+    second: DUCK_ R Toe02
+  - first:
+      1: 100062
+    second: DUCK_ R UpperArm
+  - first:
+      1: 100064
+    second: DUCK_ Spine
+  - first:
+      1: 100066
+    second: root
+  - first:
+      1: 100068
+    second: TailL
+  - first:
+      1: 100070
+    second: TailR
+  - first:
+      1: 100072
+    second: WingLeftA
+  - first:
+      1: 100074
+    second: WingLeftB
+  - first:
+      1: 100076
+    second: WingLeftC
+  - first:
+      1: 100078
+    second: WingLeftD
+  - first:
+      1: 100080
+    second: WingLeftE
+  - first:
+      1: 100082
+    second: WingLeftF
+  - first:
+      1: 100084
+    second: WingLeftG
+  - first:
+      1: 100086
+    second: WingLeftH
+  - first:
+      1: 100088
+    second: WingRightA
+  - first:
+      1: 100090
+    second: WingRightB
+  - first:
+      1: 100092
+    second: WingRightC
+  - first:
+      1: 100094
+    second: WingRightD
+  - first:
+      1: 100096
+    second: WingRightE
+  - first:
+      1: 100098
+    second: WingRightF
+  - first:
+      1: 100100
+    second: WingRightG
+  - first:
+      1: 100102
+    second: WingRightH
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: DUCK_
+  - first:
+      4: 400004
+    second: DUCK_ Head
+  - first:
+      4: 400006
+    second: DUCK_ L Calf
+  - first:
+      4: 400008
+    second: DUCK_ L Clavicle
+  - first:
+      4: 400010
+    second: DUCK_ L Foot
+  - first:
+      4: 400012
+    second: DUCK_ L Forearm
+  - first:
+      4: 400014
+    second: DUCK_ L Hand
+  - first:
+      4: 400016
+    second: DUCK_ L HorseLink
+  - first:
+      4: 400018
+    second: DUCK_ L Thigh
+  - first:
+      4: 400020
+    second: DUCK_ L Toe0
+  - first:
+      4: 400022
+    second: DUCK_ L Toe01
+  - first:
+      4: 400024
+    second: DUCK_ L Toe02
+  - first:
+      4: 400026
+    second: DUCK_ L UpperArm
+  - first:
+      4: 400028
+    second: DUCK_ Neck
+  - first:
+      4: 400030
+    second: DUCK_ Neck1
+  - first:
+      4: 400032
+    second: DUCK_ Neck2
+  - first:
+      4: 400034
+    second: DUCK_ Neck3
+  - first:
+      4: 400036
+    second: DUCK_ Neck4
+  - first:
+      4: 400038
+    second: DUCK_ Pelvis
+  - first:
+      4: 400040
+    second: DUCK_ Queue de cheval 1
+  - first:
+      4: 400042
+    second: DUCK_ R Calf
+  - first:
+      4: 400044
+    second: DUCK_ R Clavicle
+  - first:
+      4: 400046
+    second: DUCK_ R Foot
+  - first:
+      4: 400048
+    second: DUCK_ R Forearm
+  - first:
+      4: 400050
+    second: DUCK_ R Hand
+  - first:
+      4: 400052
+    second: DUCK_ R HorseLink
+  - first:
+      4: 400054
+    second: DUCK_ R Thigh
+  - first:
+      4: 400056
+    second: DUCK_ R Toe0
+  - first:
+      4: 400058
+    second: DUCK_ R Toe01
+  - first:
+      4: 400060
+    second: DUCK_ R Toe02
+  - first:
+      4: 400062
+    second: DUCK_ R UpperArm
+  - first:
+      4: 400064
+    second: DUCK_ Spine
+  - first:
+      4: 400066
+    second: root
+  - first:
+      4: 400068
+    second: TailL
+  - first:
+      4: 400070
+    second: TailR
+  - first:
+      4: 400072
+    second: WingLeftA
+  - first:
+      4: 400074
+    second: WingLeftB
+  - first:
+      4: 400076
+    second: WingLeftC
+  - first:
+      4: 400078
+    second: WingLeftD
+  - first:
+      4: 400080
+    second: WingLeftE
+  - first:
+      4: 400082
+    second: WingLeftF
+  - first:
+      4: 400084
+    second: WingLeftG
+  - first:
+      4: 400086
+    second: WingLeftH
+  - first:
+      4: 400088
+    second: WingRightA
+  - first:
+      4: 400090
+    second: WingRightB
+  - first:
+      4: 400092
+    second: WingRightC
+  - first:
+      4: 400094
+    second: WingRightD
+  - first:
+      4: 400096
+    second: WingRightE
+  - first:
+      4: 400098
+    second: WingRightF
+  - first:
+      4: 400100
+    second: WingRightG
+  - first:
+      4: 400102
+    second: WingRightH
+  - first:
+      74: 7400000
+    second: Fly
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Fly
+      takeName: Take 001
+      internalID: 7400000
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 092cfa52fbb3c9f4299c3a42a7e51e37,
     type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
