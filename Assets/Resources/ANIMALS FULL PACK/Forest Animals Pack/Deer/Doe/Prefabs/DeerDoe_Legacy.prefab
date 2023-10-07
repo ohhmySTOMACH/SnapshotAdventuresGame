@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 7414387874820404206}
   m_Layer: 0
   m_Name: DeerDoe_Legacy
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,9 +355,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7414387874803279730}
+  - component: {fileID: 842735200641433986}
   m_Layer: 0
   m_Name: root
-  m_TagString: Untagged
+  m_TagString: Photographicable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,6 +379,28 @@ Transform:
   - {fileID: 7414387874803279694}
   m_Father: {fileID: 7414387874803279728}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &842735200641433986
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414387874803186450}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 2b1cc777da3853d46860aa8236f9fcf5, type: 3}
 --- !u!1 &7414387874803186452
 GameObject:
   m_ObjectHideFlags: 0

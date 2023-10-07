@@ -28,6 +28,7 @@ namespace SnapshotChronicles.Camera
 
         private Material cameraScreenMaterial;
         private MeshRenderer meshRendererCameraScreen;
+        private CountPoints countPoints;
 
         private Boolean isCapturing = false;
         private const String OUTPUT_TYPE = "png";
@@ -35,6 +36,7 @@ namespace SnapshotChronicles.Camera
         private const String LIGHT_NAME = "Light";
 
         private void Start() {
+            countPoints = GetComponent<CountPoints>();
             m_audioSource = GetComponent<AudioSource>();
             cameraTransform = GetComponent<Transform>();
             screenTransform = cameraTransform.Find(SCREEN_NAME);
@@ -70,6 +72,7 @@ namespace SnapshotChronicles.Camera
         // Corouting for the capture
         private IEnumerator Capture()
         {
+            countPoints.CountPhotographicableObjectsInView();
             ShutterAudioFeedback();
             StartCoroutine(ShutterVisualFeedback());
 

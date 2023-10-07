@@ -27,6 +27,10 @@ namespace SnapshotChronicles.Interaction
             }
         }
 
+        void FixedUpdate() {
+            
+        }
+
         private void InteractWithNPC()
         {
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
