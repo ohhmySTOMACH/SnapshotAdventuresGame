@@ -4,25 +4,18 @@ using UnityEngine;
 
 public class CountPoints : MonoBehaviour
 {
-    public int rayMultiplier = 2;
-    public const string TARGET_TAG = "Photograhpicable";
+    [SerializeField] private Camera mainCamera;
+    public int rayMultiplier = 1;
+    public const string TARGET_TAG = "Photographicable";
     public float maxRaycastDistance = 100f; 
     public bool showRayCastLine = true;
     public Color rayColor = Color.red;
-    private HashSet<RaycastHit> photographicableObjectSet = new HashSet<RaycastHit>();
 
     public void CountPhotographicableObjectsInView()
     {
-        
+        HashSet<RaycastHit> photographicableObjectSet = new HashSet<RaycastHit>();
         int rayCountX = 16 * rayMultiplier;
         int rayCountY = 9 * rayMultiplier;
-
-        // TODO: When click firebutton
-        Camera mainCamera = Camera.main;
-
-        // Calculate the dimensions of the view frustum
-        float halfWidth = mainCamera.pixelWidth / 2f;
-        float halfHeight = mainCamera.pixelHeight / 2f;
 
         for (int x = 0; x < rayCountX; x++)
         {
@@ -33,28 +26,33 @@ public class CountPoints : MonoBehaviour
                 float normalizedY = (y + 0.5f) / rayCountY;
 
                 // Calculate ray origin (center of the pixel)
-                Vector3 rayOrigin = mainCamera.ViewportToWorldPoint(new Vector3(normalizedX, normalizedY, 0f));
+                Vector3 rayOrigin = mainCamera.ViewportToWorldPoint(new Vector3(normalizedX, normalizedY, maxRaycastDistance));
 
                 // Calculate ray direction (from camera position to ray origin)
                 Vector3 rayDirection = rayOrigin - mainCamera.transform.position;
+                int layerMask = LayerMask.NameToLayer("Default");
+                Debug.Log("Ray Direction: " + rayDirection + "Ray Origin: " + rayOrigin);
+
+
+                if (showRayCastLine) {
+                    Debug.DrawRay(mainCamera.transform.position, rayDirection * 10f, rayColor, 5.0f);
+                } else {
+                    Debug.Log("Raycast line is not shown");
+                }
 
                 RaycastHit hit;
-                if (Physics.Raycast(mainCamera.transform.position, rayDirection, out hit, maxRaycastDistance))
+                if (Physics.Raycast(mainCamera.transform.position, rayDirection, out hit, maxRaycastDistance, layerMask)) //Ignore actual camera's layer
                 {
-                    if (showRayCastLine) {
-                        Debug.Log("Hit point: " + hit.point);
-                        Debug.DrawRay(mainCamera.transform.position, rayDirection, rayColor, 5.0f);
-                    } else {
-                        Debug.Log("Raycast line is not shown");
-                    }
-
+                    Debug.Log("Hit point: " + hit.point);
                     if (hit.collider.CompareTag(TARGET_TAG))
                     {
                         Debug.Log("Target Found");
                         photographicableObjectSet.Add(hit); 
                     } else {
-                        Debug.Log("No Collider Tagged Named Animals, found: " + hit.collider.tag);
+                        Debug.Log("No Collider Tagged Named Photographicable, found: " + hit.collider.tag + "Layer: " + LayerMask.LayerToName(hit.collider.gameObject.layer));
                     }
+                } else {
+                    Debug.Log("No Raycast");
                 }
             }
         }
