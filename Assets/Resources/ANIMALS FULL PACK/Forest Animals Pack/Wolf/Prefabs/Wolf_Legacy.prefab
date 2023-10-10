@@ -264,9 +264,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144059649254263857}
+  - component: {fileID: 4673288148094502887}
   m_Layer: 0
   m_Name: root
-  m_TagString: Untagged
+  m_TagString: Photographicable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,6 +288,28 @@ Transform:
   - {fileID: 144059649254263869}
   m_Father: {fileID: 144059649254263859}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &4673288148094502887
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144059649254166545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 2c80979df7ad6cd43b45189d55f9943e, type: 3}
 --- !u!1 &144059649254166547
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +323,7 @@ GameObject:
   - component: {fileID: 144059649274566801}
   m_Layer: 0
   m_Name: Wolf_Legacy
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

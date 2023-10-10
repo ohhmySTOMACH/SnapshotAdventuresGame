@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,13 +8,13 @@ public class CountPoints : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     public int rayMultiplier = 1;
     public const string TARGET_TAG = "Photographicable";
-    public float maxRaycastDistance = 100f; 
+    public float maxRaycastDistance = 900f; 
     public bool showRayCastLine = true;
     public Color rayColor = Color.red;
 
     public void CountPhotographicableObjectsInView()
     {
-        HashSet<RaycastHit> photographicableObjectSet = new HashSet<RaycastHit>();
+        HashSet<String> photographicableObjectSet = new HashSet<String>();
         int rayCountX = 16 * rayMultiplier;
         int rayCountY = 9 * rayMultiplier;
 
@@ -25,38 +26,36 @@ public class CountPoints : MonoBehaviour
                 float normalizedX = (x + 0.5f) / rayCountX;
                 float normalizedY = (y + 0.5f) / rayCountY;
 
-                // Calculate ray origin (center of the pixel)
-                Vector3 rayOrigin = mainCamera.ViewportToWorldPoint(new Vector3(normalizedX, normalizedY, maxRaycastDistance));
+                Vector3 rayOrigin = mainCamera.ViewportToWorldPoint(new Vector3(normalizedX, normalizedY, mainCamera.nearClipPlane));
+                Vector3 rayEnd = mainCamera.ViewportToWorldPoint(new Vector3(normalizedX, normalizedY, maxRaycastDistance));
 
-                // Calculate ray direction (from camera position to ray origin)
-                Vector3 rayDirection = rayOrigin - mainCamera.transform.position;
+                Vector3 rayDirection = rayEnd - rayOrigin;
                 int layerMask = LayerMask.NameToLayer("Default");
-                Debug.Log("Ray Direction: " + rayDirection + "Ray Origin: " + rayOrigin);
-
 
                 if (showRayCastLine) {
-                    Debug.DrawRay(mainCamera.transform.position, rayDirection * 10f, rayColor, 5.0f);
-                } else {
-                    Debug.Log("Raycast line is not shown");
+                    Debug.DrawRay(rayOrigin, rayDirection * 10f, rayColor, 5.0f);
                 }
 
                 RaycastHit hit;
-                if (Physics.Raycast(mainCamera.transform.position, rayDirection, out hit, maxRaycastDistance, layerMask)) //Ignore actual camera's layer
+                if (Physics.Raycast(rayOrigin, rayDirection, out hit, maxRaycastDistance)) //Ignore actual camera's layer
                 {
-                    Debug.Log("Hit point: " + hit.point);
                     if (hit.collider.CompareTag(TARGET_TAG))
                     {
-                        Debug.Log("Target Found");
-                        photographicableObjectSet.Add(hit); 
-                    } else {
-                        Debug.Log("No Collider Tagged Named Photographicable, found: " + hit.collider.tag + "Layer: " + LayerMask.LayerToName(hit.collider.gameObject.layer));
+                        String hitColliderName = hit.collider.name;
+                        // Debug.Log("Target Found, Name: " + hit.collider.name +", Layer: " + LayerMask.LayerToName(hit.collider.gameObject.layer));
+                        if (hitColliderName == "root"){
+                            photographicableObjectSet.Add(hit.collider.transform.parent.name); 
+                        } else {
+                            photographicableObjectSet.Add(hitColliderName); 
+                        }
                     }
-                } else {
-                    Debug.Log("No Raycast");
                 }
             }
         }
         Debug.Log("Points for this picture: " + photographicableObjectSet.Count);
+        foreach (String name in photographicableObjectSet) {
+            Debug.Log(name);
+        }
     }
 }
 

@@ -7,6 +7,7 @@ namespace SnapshotChronicles.Interaction
 {
     public class PlayerInteraction : MonoBehaviour
     {
+        public Dialogue dialogue;
         public List<GameObject> animalObjects = new List<GameObject>();
         [SerializeField] private float interactRange = 5f;
         private NPCInteraction npcInteraction;
@@ -43,7 +44,8 @@ namespace SnapshotChronicles.Interaction
                         npcInteraction = collider.GetComponent<NPCInteraction>();
                         if (npcInteraction != null)
                         {
-                            npcInteraction.Interact();
+                            // npcInteraction.ChatBubbleInteract();
+                            npcInteraction.DialogInteract();
                         }
                     }
                 }

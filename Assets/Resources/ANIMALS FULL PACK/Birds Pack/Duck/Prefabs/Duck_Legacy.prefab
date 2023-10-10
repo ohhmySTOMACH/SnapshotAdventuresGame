@@ -364,9 +364,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 430904}
+  - component: {fileID: 736406949422150755}
   m_Layer: 0
   m_Name: root
-  m_TagString: Untagged
+  m_TagString: Photographicable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,6 +388,28 @@ Transform:
   - {fileID: 490548}
   m_Father: {fileID: 446128}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!64 &736406949422150755
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 092cfa52fbb3c9f4299c3a42a7e51e37, type: 3}
 --- !u!1 &111312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1643,6 +1666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446128}
   - component: {fileID: 9581448}
+  - component: {fileID: 6538655777316045782}
   m_Layer: 0
   m_Name: Duck_Legacy
   m_TagString: Animals
@@ -1660,7 +1684,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.65999997, y: 0.41913813, z: 1.0633903}
+  m_LocalScale: {x: 2.1881273, y: 2.1881275, z: 2.1881278}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 430904}
@@ -1688,6 +1712,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6538655777316045782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0763f4ebc1f4946a1a250c08ae8f1cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 1
+  tiltAmount: 0.4
 --- !u!1 &197202
 GameObject:
   m_ObjectHideFlags: 0

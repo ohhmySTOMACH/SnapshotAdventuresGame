@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: 1260700935031909870}
   m_Layer: 0
   m_Name: Rabbit_Legacy
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -794,7 +794,7 @@ GameObject:
   - component: {fileID: 5618889817665971586}
   m_Layer: 0
   m_Name: root
-  m_TagString: Untagged
+  m_TagString: Photographicable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -834,7 +834,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300006, guid: a599142d59c888040b646be41f9bbc34, type: 3}
 --- !u!1 &1260700935050306844

@@ -16,7 +16,6 @@ public class ChatBubble : MonoBehaviour {
         Transform chatBubbleTransform = Instantiate(GameAssets.i.pfChatBubble, parent);
         chatBubbleTransform.localPosition = localPosition;
         chatBubbleTransform.localRotation = Quaternion.Euler(localRotationX, localRotationY, localRotationZ);
-        // chatBubbleTransform.LookAt(target);
 
         chatBubbleTransform.GetComponent<ChatBubble>().Setup(text);
 
@@ -35,12 +34,5 @@ public class ChatBubble : MonoBehaviour {
 
         Vector2 padding = new Vector2(3f, 1f);
         backgroundSpriteRenderer.size = textSize + padding;
-
-        // Vector3 offset = new Vector3(-3f, 0f);
-        // backgroundSpriteRenderer.transform.localPosition = 
-        //     new Vector3(backgroundSpriteRenderer.size.x / 2f, 0f) + offset;
-
-
-        // TextWriter.AddWriter_Static(textMeshPro, text, .03f, true, true, () => { });
     }
 }

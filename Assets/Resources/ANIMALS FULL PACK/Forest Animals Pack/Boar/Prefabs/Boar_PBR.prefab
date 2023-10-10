@@ -1064,9 +1064,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4167811523456193362}
+  - component: {fileID: 1879457930704316430}
   m_Layer: 0
   m_Name: root
-  m_TagString: Untagged
+  m_TagString: Photographicable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1087,6 +1088,28 @@ Transform:
   - {fileID: 4167811523456193296}
   m_Father: {fileID: 4167811523456193364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1879457930704316430
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167811523456356210}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 2577d6f8a42ae22478c120662f97342b, type: 3}
 --- !u!1 &4167811523456356212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,7 +1123,7 @@ GameObject:
   - component: {fileID: 4167811523472525232}
   m_Layer: 0
   m_Name: Boar_PBR
-  m_TagString: Untagged
+  m_TagString: Animals
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

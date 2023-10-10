@@ -11,16 +11,14 @@ namespace SnapshotChronicles.Interaction
         [SerializeField] float posX = 0f;
         [SerializeField] float posY = 0f;
         [SerializeField] float posZ = 5f;
-        public void Interact()
+        public void ChatBubbleInteract()
         {
             ChatBubble.Create(transform.transform, new Vector3(posX, posY, posZ), "Hello there!");
+        }
 
-            // mesh = transform.GetComponent<MeshCollider>();
-            // if (mesh == null) {
-            //     Debug.Log("Mesh is NUll");
-            // } else {
-            //     Debug.Log(mesh);
-            // }
+        public void DialogInteract()
+        {
+            Debug.Log("Player opened a conversation with NPC");
         }
     }
 }
