@@ -7,7 +7,6 @@ namespace SnapshotChronicles.Interaction
 {
     public class PlayerInteraction : MonoBehaviour
     {
-        public Dialogue dialogue;
         public List<GameObject> animalObjects = new List<GameObject>();
         [SerializeField] private float interactRange = 5f;
         private NPCInteraction npcInteraction;
@@ -28,16 +27,12 @@ namespace SnapshotChronicles.Interaction
             }
         }
 
-        void FixedUpdate() {
-            
-        }
-
         private void InteractWithNPC()
         {
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     if (collider.CompareTag("NPC"))
                     {
