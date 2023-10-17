@@ -10,6 +10,7 @@ namespace SnapshotChronicles.Interaction
         [SerializeField] private float posZ = 5f;
         
         DialogueManager dialogueManager;
+        
         public void ChatBubbleInteract()
         {
             ChatBubble.Create(transform.transform, new Vector3(posX, posY, posZ), "Hello there!");
