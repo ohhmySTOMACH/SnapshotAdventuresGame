@@ -6,9 +6,7 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public event Action OnEndDialogueCalled;
     private Queue<string> sentences;
-
     void Start()
     {
         sentences = new Queue<string>();
@@ -34,7 +32,6 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-
         string sentence = sentences.Dequeue();
         Debug.Log(sentence);
     }
@@ -42,7 +39,5 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue() 
     {
         Debug.Log("End of conversation");
-        // Send call back to PlayerInteraction to end conversation. Set isInConversation to false.
-        OnEndDialogueCalled?.Invoke();
     }
 }
